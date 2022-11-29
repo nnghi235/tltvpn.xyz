@@ -1,4 +1,5 @@
 bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
+clear
 read -p " NODE ID 1: " node_id1
   [ -z "${node_id1}" ] && node_id1=0
   
@@ -104,4 +105,4 @@ Nodes:
 EOF
 sed -i "s|NodeID1:.*|NodeID: ${node_id1}|" ./config.yml
 sed -i "s|NodeID2:.*|NodeID: ${node_id2}|" ./config.yml
-cd /root && xrayr restart && echo -e "   Cài Đặt Hoàn Tất!"
+cd /root && xrayr restart && clear && echo -e "   Cài Đặt Hoàn Tất!"
